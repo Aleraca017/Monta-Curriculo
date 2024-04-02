@@ -92,7 +92,7 @@ button.addEventListener("click", function a(e){
 
     document.write(
         //abertura dos dados importantes
-        "<link rel='stylesheet'  href='css/theme/light/final.css' type='text/css'>",
+        "<link rel='stylesheet'  href='light_final.css' type='text/css'>",
         "<title>Curriculo</title>",
         "<div class='geral'>",
         "<div class='titulo'> <b>",name.value,"</b> </div>",
