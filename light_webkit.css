@@ -1,0 +1,84 @@
+::-webkit-scrollbar{
+position: relative;
+width: 1.2vh;
+outline: 0.4vh solid;
+outline-color: rgba(241, 241, 241, 0);
+border-radius: 1vh;
+}
+::-webkit-scrollbar-track{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 50vh;
+}
+::-webkit-scrollbar-thumb{
+    width: 100%;
+    height: 5%;
+    background: linear-gradient(135deg, rgba(20, 13, 19, 0),rgb(255, 109, 248), rgb(78, 81, 255), rgba(14, 12, 32, 0));
+    border-radius: 50vh;
+}
+::-webkit-input-placeholder{
+    color: rgba(0, 0, 0, 0.459);
+    text-align: left;
+    font-size: 2vh;
+}
+textarea::-webkit-input-placeholder{
+    text-align: center;
+}
+input[type="month"]::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+    width: 1vw;
+    height: 2vh;
+}
+
+@media (max-width: 768px) {
+
+    ::-webkit-scrollbar{
+    position: relative;
+    width: 0.6vh;
+    outline: 0.4vh solid;
+    outline-color: rgba(249, 85, 255, 0);
+    border-radius: 1vh;
+    }
+    ::-webkit-scrollbar-track{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(148, 43, 122, 0);
+        border-radius: 50vh;
+    }
+    ::-webkit-scrollbar-thumb{
+        width: 100%;
+        height: 1%;
+        background: linear-gradient(135deg, rgba(20, 13, 19, 0),rgb(255, 109, 248), rgb(78, 81, 255), rgba(14, 12, 32, 0));
+        border-radius: 50vh;
+    }
+    ::-webkit-input-placeholder{
+        text-align: left;
+        font-size: 1.5vh;
+        text-shadow:none;
+    }
+    textarea::-webkit-input-placeholder{
+        text-align: center;
+    }
+    input[type="month"]::-webkit-calendar-picker-indicator{
+        cursor: pointer;
+        color: black;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator{
+        cursor: pointer;
+        color: black;
+        width: 3vw;
+        height: 1vh;
+    }
+    
+    
+    
+    }
+    
+
+
+
+

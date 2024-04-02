@@ -1,0 +1,587 @@
+:root{
+    --cor-textos: rgb(75, 75, 75);
+    --cor-titulos: #5d71a8;
+}
+
+.oculta{display: none;}
+
+.auto{
+    background-color:#00000000;
+    color: #00000000;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background:
+        linear-gradient(45deg, 
+        rgb(254, 212, 255),
+        rgb(195, 188, 255),
+        rgb(153, 201, 255));
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center
+}
+.volta_formulario{
+    width: 40vw;
+    height: 90vh;
+    transform: translateX(0%);
+    backdrop-filter: brightness(125%) ;
+    box-shadow: inset 0vh 0px 15vh rgba(255, 255, 255, 0.384),
+    0px 0px 10em 5em rgba(255, 255, 255, 0.541), 0px 0px 20em rgb(236, 236, 236);
+    border-radius: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2vh;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    scroll-snap-align: none start;
+    scroll-margin-inline-start: 30px;
+}
+.titulo{
+    width: 30vw;
+    height: 7vh;
+    background-color: rgba(245, 245, 245, 0);
+    border-radius: 0.5vh;
+    text-align: center;
+    font-size: 4.3vh;
+    color: #5d71a8;
+    font-weight: bold;
+}
+/*Campos de dados Pessoais ---------------------------------------------------------------------------------------------------------*/
+.dados_pessoais{
+    width: 32vw;
+    height: auto;
+    background-color: rgba(207, 144, 26, 0);
+    color: rgb(75, 75, 75);
+    margin-top: 1vh;
+    text-align: left;
+}
+.dados_pessoais p{
+    text-align: center;
+    color: var(--cor-titulos);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+}
+.dados_pessoais_c1{
+    width: 48%;
+    height: 52vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5vh;
+}
+.dados_pessoais_c2{
+    width: 48%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5vh;
+}
+.dados_pessoais_f1{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.dados{
+    margin-top: 1vh;
+}
+/*Campo de dados Formações ---------------------------------------------------------------------------------------------------------*/
+.formacoes{
+    width: 32vw;
+    height: auto;
+    background-color: rgba(73, 138, 116, 0);
+    margin-top: 1vh;
+    text-align: center;
+    color: var(--cor-textos)
+}
+.formacoes_f1{
+    width: auto;
+    height: auto;
+    text-align: left;
+}
+.formacoes_c1{
+    width: 100%;
+    height: auto;
+    font-size: 2.5vh;
+}
+.formacoes_c1 input{
+    width: 90%;
+}
+.formacoes p{
+    text-align: center;
+    color: var(--cor-titulos);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+}
+/*Campo de dados Cursos ---------------------------------------------------------------------------------------------------------*/
+.cursos_extra{
+    width: 32vw;
+    height: auto;
+    background-color: rgba(128, 255, 0, 0);
+    margin-top: 1vh;
+    text-align: center;
+    color: var(--cor-textos);
+}
+.cursos_f1{
+    width: auto;
+    height: auto;
+    text-align: left;
+}
+.cursos_c1{
+    width: 100%;
+    height: auto;
+    font-size: 2.5vh;
+    padding-bottom: 3vh;
+}
+.cursos_c1 label{
+    padding: 1vh;
+    display: flex;
+    align-items: center;
+}
+.cursos_c1 input[type="month"]{
+    width: 9vw;
+    height: 3vh;
+    margin-left: 1vw;
+}
+.cursos_extra p{
+    text-align: center;
+    color: var(--cor-titulos);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+}
+.cursos_extra input{
+    width: 100%;
+}
+/*Campo de dados habilidades -------------------------------------------------------------------------------------------------------*/
+.habilidades_gerais{
+    width: 32vw;
+    height: auto;
+    background-color: rgba(255, 228, 196, 0);
+    margin-top: 1vh;
+    text-align: center;
+    color: white;
+}
+.habilidades_f1{
+    width: auto;
+    height: auto;
+    text-align: left;
+}
+.habilidades_c1{
+    width: 100%;
+    height: auto;
+    font-size: 2.5vh;
+}
+.habilidades_gerais textarea{
+    background-color:#00000000;
+    color: var(--cor-textos);
+    border-style: solid;
+    border-radius: 1vh;
+    border-color: rgb(95, 95, 95);
+    border-width: 0.3vh;
+    width: 100%;
+    height: auto;
+    font-size: 2vh;
+    text-align: center;
+    outline: none;
+}
+.habilidades_gerais p{
+    text-align: center;
+    color: var(--cor-titulos);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+}
+/*Campo de experiencias profissionais -------------------------------------------------------------------------------------------------------*/
+.experiencias_profissionais{
+    width: 32vw;
+    height: auto;
+    background-color: rgba(128, 255, 0, 0);
+    margin-top: 1vh;
+    text-align: center;
+    color: var(--cor-textos);
+}
+#xp_f1{
+    width: auto;
+    height: auto;
+    text-align: left;
+}
+.xp_c1{
+    width: 100%;
+    height: auto;
+    font-size: 2.5vh;
+    padding-bottom: 3vh;
+}
+.xp_c1 label{
+    padding: 1vh;
+    display: flex;
+    align-items: center;
+}
+.xp_c1 input[type="month"]{
+    width: 9vw;
+    height: 3vh;
+    margin-left: 1vw;
+}
+.experiencias_profissionais p{
+    text-align: center;
+    color: var(--cor-titulos);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+}
+.experiencias_profissionais input{
+    width: 100%;
+}
+.label_xp_dur_de{
+    width: auto;
+    height: 1.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row;
+}
+/*Campo de dados habilidades -------------------------------------------------------------------------------------------------------*/
+.observacoes_gerais{
+    width: 32vw;
+    height: auto;
+    background-color: rgba(255, 228, 196, 0);
+    margin-top: 1vh;
+    text-align: center;
+    color: white;
+}
+.observacoes_f1{
+    width: auto;
+    height: auto;
+    text-align: left;
+}
+.observacoes_c1{
+    width: 100%;
+    height: auto;
+    font-size: 2.5vh;
+}
+.observacoes_gerais p{
+    font-size: 3vh;
+    color:var(--cor-titulos);
+}
+.observacoes_gerais textarea{
+    background-color:#00000000;
+    color: var(--cor-textos);
+    border-style: solid;
+    border-radius: 1vh;
+    border-color: rgb(94, 94, 94);
+    border-width: 0.3vh;
+    width: 100%;
+    height: auto;
+    font-size: 2vh;
+    text-align: center;
+    outline: none;
+}
+/*botoes--------------------------------------------------------------------------------*/
+.botoes_submitreset{
+    width: 32vw;
+    height: auto;
+    background-color: rgba(240, 248, 255, 0);
+    margin-bottom: 2vh;
+
+}
+.botoes_c1{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+/*labels propias*/
+
+@media print {
+    .noprint {
+       display: none;
+    }
+ }
+
+ @media (max-width: 768px) {
+
+    .oculta{
+        display: none;
+    }
+    
+    .auto{
+        background-color: rgba(240, 248, 255, 0);
+        color: rgba(240, 248, 255, 0);
+    }
+    
+    .container{
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+    }
+    
+    .volta_formulario{
+        width: 90vw;
+        height: 90vh;
+        transform: translateX(0%);
+        border-radius: 1.5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2vh;
+        overflow-y: scroll;
+    }
+    .titulo{
+        width: 70vw;
+        height: auto;
+        text-align: center;
+        font-size: 3vh;
+        font-weight: bold;
+    }
+    /*Campo de dados pessoais*/
+    .dados_pessoais{
+        width: 80vw;
+        height: auto;
+        text-align: left;
+    }
+    .dados_pessoais p{
+        text-align: center;
+        font-family: arial, Helvetica, sans-serif;
+        font-size: 2vh;
+    }
+    .dados_pessoais_c1{
+        width: 80vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5vh;
+    }
+    .dados_pessoais_c2{
+        width: 80vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        font-size:1.5vh;
+    }
+    .dados_pessoais_f1{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-left: -1vh;
+    }
+    .dados{
+        margin-top: 0.3vh;
+    }
+    .dados_pessoais input{
+        width: 100%;
+    }
+    /*Campo de dados Formações*/
+    .formacoes{
+        width: 80vw;
+        height: auto;
+        text-align: center;
+    }
+    .formacoes_f1{
+        width: auto;
+        height: auto;
+        text-align: left;
+    }
+    .formacoes_c1{
+        width: 100%;
+        height: auto;
+        font-size: 1.5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .formacoes_c1 input{
+        width: 100%;
+    }
+    .formacoes p{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2vh;
+    }
+    /*campo de dados cursos*/
+    .cursos_extra{
+        width: 80vw;
+        height: auto;
+        margin-top: 1vh;
+        text-align: center;
+    }
+    .cursos_f1{
+        width: auto;
+        height: auto;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .cursos_c1{
+        width: 100%;
+        height: auto;
+        font-size: 1.5vh;
+        padding-bottom: 3vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .cursos_c1 label{
+        padding: 1vh;
+        display: flex;
+        align-items: center;
+    }
+    .cursos_c1 input [type="month"]{
+        width: 9vw;
+        height: 3vh;
+        margin-left: 1vw;
+    }
+    .cursos_extra p{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2vh;
+    }
+    .cursos_extra input{
+        width: 100%;
+    }
+    
+    /*Habilidades*/
+    .habilidades_gerais{
+        width: 80vw;
+        height: auto;
+        margin-top: 1vh;
+        text-align: center;
+    }
+    .habilidades_f1{
+        width: auto;
+        height: auto;
+        text-align: left;
+    }
+    .habilidades_c1{
+        width: 100%;
+        height: auto;
+        font-size: 1.5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .habilidades_gerais textarea{
+        background-color:#00000000;
+        border-style: solid;
+        border-radius: 1vh;
+        border-width: 0.3vh;
+        width: 90%;
+        height: auto;
+        font-size: 1.5vh;
+        text-align: center;
+        outline: none ;
+    }
+    .habilidades_gerais p{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2vh;
+    }
+    /*XP Profissional*/
+    .experiencias_profissionais{
+        width: 80vw;
+        height: auto;
+        margin-top: 1vh;
+        text-align: center;
+    }
+    #xp_f{
+        width: auto;
+        height: auto;
+        text-align: left;
+    }
+    .xp_c1{
+        width: 100%;
+        height: auto;
+        font-size: 1.5vh;
+        padding-bottom: 2vh;
+    }
+    .xp_c1 label{
+        padding: 1vh;
+    }
+    .xp_c1 input[type="month"]{
+        width: 15vw;
+        height: 2vh;
+        margin-left: 0.3vw;
+    }
+    .experiencias_profissionais p {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2vh;
+    }
+    .experiencias_profissionais input{
+        width: 100%;
+        margin-bottom: 1vh;
+    }
+    .label_xp_dur_de{
+        width: auto;
+        height: auto;
+    }
+    /*Observações*/
+    .observacoes_gerais{
+        width: 80vw;
+        height: auto;
+        margin-top: 1vh;
+        text-align: center;
+    }
+    .observacoes_f1{
+        width: auto;
+        height: auto;
+        font-size: 1.5vh;
+    }
+    .observacoes_c1{
+        width: 100%;
+        height: auto;
+        font-size: 1.5vh;
+    }
+    .observacoes_gerais p{
+        font-size: 2vh;
+    }
+    
+    .botoes_c1{
+        display: flex;   
+    }
+    
+    .botoes_submitreset{
+        width: 80vw;
+        height: auto;
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }

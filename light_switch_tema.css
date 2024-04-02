@@ -1,0 +1,199 @@
+.id1{
+    width: 4vh;
+    height: 10vh;
+    background-color: rgb(170, 217, 255);
+    box-shadow: 0.5vh 0.5vh 1vh rgb(161, 161, 161), 0vh 0vh 1vh inset  rgb(87, 146, 194);
+    display: flex;
+    border-radius: 5vh;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translateX(34vh) translateY(0vh);
+}
+.id2{
+    width: 4vh;
+    height: 10vh;
+    background-color: rgb(22, 35, 109);
+    box-shadow: 0.5vh 0.5vh 1vh rgb(5, 5, 5), 0vh 0vh 1vh inset  rgb(6, 16, 77);
+    display: flex;
+    border-radius: 5vh;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translateX(34vh) translateY(0vh);
+}
+.ex1{
+    width: 3vh;
+    height: 3vh;
+    background-color: rgb(109, 189, 255);
+    box-shadow: 0px 0px 1vh 0.2vh rgba(0, 0, 0, 0), 0px 0px 0.5vh inset rgb(9, 67, 114);
+    border-radius: 50%;
+    transition: transform 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-3vh);
+}
+.ex2{
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50%;
+    background-color: rgb(22, 35, 109);
+    box-shadow: 0px 0px 1vh 0.05vh inset rgb(255, 217, 0);
+    transition: transform 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+}
+.moon{
+    width: 1vh;
+    height: 1vh;
+    background-color: transparent;
+    box-shadow: -0.45vh 0px 0 0.3vh rgb(255, 217, 0);
+    rotate: 325deg;
+    border-radius: 100%;
+    transform: translateX(0.5vh) ;
+    transition: all 1s;
+    color: rgba(0, 0, 0, 0);
+}
+
+.sun {
+    color: black;
+    font-size: 2vh;
+    font-weight: bold;
+    transition: all 1s;
+}
+
+@media (max-width: 430px){
+    .id1{
+            width: 0vh;
+            height: 0vh;
+            background-color: rgb(170, 217, 255);
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transform: translateX(17vh) translateY(2vh);
+    }
+    .id2{
+        width: 0vh;
+            height: 0vh;
+            background-color: rgb(22, 35, 109);
+            box-shadow: 0.5vh 0.5vh 1vh rgb(5, 5, 5), 0vh 0vh 1vh inset  rgb(6, 16, 77);
+            display: flex;
+            border-radius: 5vh;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transform: translateX(0vh);
+    }
+    .ex1{
+        width: 3vh;
+        height: 3vh;
+        background-color: rgb(109, 189, 255);
+        box-shadow: 0px 0px 1vh 0.2vh rgba(0, 0, 0, 0), 0px 0px 0.5vh inset rgb(9, 67, 114);
+        border-radius: 50%;
+        display: flex;
+        transition: none;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(0vh) translateX(0vh);
+        position: relative;
+    }
+    .ex2{
+        width: 3vh;
+        height: 3vh;
+        border-radius: 50%;
+        background-color: rgb(22, 35, 109);
+        box-shadow: 0px 0px 1vh 0.05vh inset rgb(255, 217, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: none;
+        transform: translateX(17vh);
+        position: relative;
+    }
+    .moon{
+        width: 1vh;
+        height: 1vh;
+        background-color: transparent;
+        box-shadow: -0.45vh 0px 0 0.3vh rgb(255, 217, 0);
+        rotate: 325deg;
+        border-radius: 100%;
+        transform: translateX(0.5vh) ;
+        color: rgba(0, 0, 0, 0);
+    }
+    
+    .sun {
+        color: black;
+        font-size: 2vh;
+        font-weight: bold;
+    }
+    }
+
+@media (min-width: 431px) and (max-width: 768px){
+.id1{
+        width: 0vh;
+        height: 0vh;
+        background-color: rgb(170, 217, 255);
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transform: translateX(25vh) translateY(1.2vh);
+}
+.id2{
+    width: 0vh;
+        height: 0vh;
+        background-color: rgb(22, 35, 109);
+        box-shadow: 0.5vh 0.5vh 1vh rgb(5, 5, 5), 0vh 0vh 1vh inset  rgb(6, 16, 77);
+        display: flex;
+        border-radius: 5vh;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transform: translateX(25vh) translateY(-1.2vh);
+}
+.ex1{
+    width: 3vh;
+    height: 3vh;
+    background-color: rgb(109, 189, 255);
+    box-shadow: 0px 0px 1vh 0.2vh rgba(0, 0, 0, 0), 0px 0px 0.5vh inset rgb(9, 67, 114);
+    border-radius: 50%;
+    display: flex;
+    transition: none;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0vh) translateX(0vh);
+    position: relative;
+}
+.ex2{
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50%;
+    background-color: rgb(22, 35, 109);
+    box-shadow: 0px 0px 1vh 0.05vh inset rgb(255, 217, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: none;
+    transform: translateX(0vh);
+    position: relative;
+}
+.moon{
+    width: 1vh;
+    height: 1vh;
+    background-color: transparent;
+    box-shadow: -0.45vh 0px 0 0.3vh rgb(255, 217, 0);
+    rotate: 325deg;
+    border-radius: 100%;
+    transform: translateX(0.5vh) ;
+    color: rgba(0, 0, 0, 0);
+}
+
+.sun {
+    color: black;
+    font-size: 2vh;
+    font-weight: bold;
+}
+}
+
