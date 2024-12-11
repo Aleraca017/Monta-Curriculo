@@ -15,7 +15,7 @@ function btn_plus1() {
     const c_curso = criarElemento("div", { id: `c_curso${curso}`, className: "curso-container" });
 
     // Adiciona o ID do curso ao array
-    cursosIds.push(c_curso.id);  // Aqui você garante que o ID seja registrado
+    cursoIds.push(c_curso.id);  // Aqui você garante que o ID seja registrado
 
     const name_curso_l = criarElemento("label", { htmlFor: `n_curso${curso}` }, "Curso: ");
     const name_curso = criarElemento("input", { id: `n_curso${curso}`, type: "text", className: "curso-input" });
