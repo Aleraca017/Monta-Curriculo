@@ -1,0 +1,47 @@
+#adc_cursos{
+    width: 30vw;
+    font-size: 2.5vh;
+}
+#adc_xp{
+    width: 30vw;
+    font-size: 2.5vh;
+}
+#excluic{
+    width: 100%;
+}
+#excluixp{
+    width: 100%;
+}
+#reset{
+    background: linear-gradient(135deg, rgb(255, 64, 64),rgb(255, 145, 145), rgb(213, 46, 46),rgb(255, 108, 108), rgb(255, 34, 34));
+}
+
+#tema{
+    display: none;
+}
+
+@media (max-width: 768px){
+
+    #adc_cursos{
+        width: 80vw;
+    }
+    #adc_xp{
+        width: 80vw;
+    }
+    #excluic:hover{
+        width: 100%;
+    }
+    #excluixp:hover{
+        width: 100%;
+    }
+    #adc_cursos{
+        font-size: 1.5vh;
+    }
+    #adc_xp{
+        font-size: 1.3vh;
+    }
+    #reset{
+        font-size: 1.5vh;
+        width: 30vw;
+    }
+    }
