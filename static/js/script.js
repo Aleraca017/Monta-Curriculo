@@ -39,14 +39,23 @@ document.getElementById("botao").addEventListener("click", function (e) {
 
     // Cursos extracurriculares
     const cursos = [];
-for (let id of cursoIds) {
-    const cursoAtual = {
-        nome: document.querySelector(`#n_curso${id}`)?.value || "",
-        instituicao: document.querySelector(`#i_curso${id}`)?.value || "",
-        duracao: `${document.querySelector(`#durde_curso${id}`)?.value || ""} - ${document.querySelector(`#durate_curso${id}`)?.value || ""}`,
-    };
-    cursos.push(cursoAtual);
-}
+    for (let containerId of cursoIds) {
+        const id = containerId.replace("c_curso", ""); // Extrai o número do ID do container
+
+        const formatarData = (data) => {
+            if (!data) return "";
+            const [ano, mes] = data.split("-");
+            return `${mes}/${ano}`;
+        };
+
+        const cursoAtual = {
+            nome: document.querySelector(`#n_curso${id}`)?.value || "",
+            instituicao: document.querySelector(`#i_curso${id}`)?.value || "",
+            duracao: `De: ${formatarData(document.querySelector(`#durde_curso${id}`)?.value)}, até: ${formatarData(document.querySelector(`#durate_curso${id}`)?.value)}`,
+        };
+        cursos.push(cursoAtual);
+    }
+
 
 
 
@@ -55,24 +64,37 @@ for (let id of cursoIds) {
 
     // Experiência Profissional
     const experiencias = [];
-for (let id of experienciasIds) {
-    const empresa = document.querySelector(`#xp_empresa${id}`)?.value || "";
-    const cargo = document.querySelector(`#xp_cargo${id}`)?.value || "";
-    const durDe = document.querySelector(`#xp_dur_de${id}`)?.value || "";
-    const durAte = document.querySelector(`#xp_dur_ate${id}`)?.value || "";
-    const emAtividade = document.querySelector(`#ematividade${id}`)?.checked || false;
+    for (let containerId of experienciasIds) {
+        const id = containerId.replace("c_xp", "");
 
-    const duracao = emAtividade ? `${durDe} até: em atividade` : `${durDe} até: ${durAte}`;
+        const empresa = document.querySelector(`#xp_empresa${id}`)?.value || "";
+        const cargo = document.querySelector(`#xp_cargo${id}`)?.value || "";
 
-    experiencias.push({
-        empresa,
-        cargo,
-        duracao,
-        emAtividade
-    });
-}
+        // Captura as datas e ajusta o formato para MM/YYYY
+        const durDe = document.querySelector(`#xp_dur_de${id}`)?.value || "";
+        const durAte = document.querySelector(`#xp_dur_ate${id}`)?.value || "";
 
-    
+        const formatarData = (data) => {
+            if (!data) return "";
+            const [ano, mes] = data.split("-");
+            return `${mes}/${ano}`;
+        };
+
+        const emAtividade = document.querySelector(`#ematividade${id}`)?.checked || false;
+
+        const duracao = emAtividade
+            ? `De: ${formatarData(durDe)}, até: em atividade`
+            : `De: ${formatarData(durDe)}, até: ${formatarData(durAte)}`;
+
+        experiencias.push({
+            empresa,
+            cargo,
+            duracao,
+            emAtividade,
+        });
+    }
+
+
 
     // Observações
     const observacoes = document.querySelector("#obs").value.trim();
@@ -126,14 +148,15 @@ for (let id of experienciasIds) {
     head.removeChild(css3);
     head.removeChild(css4);
     head.removeChild(css5);
-    
+
     // Botão de Imprimir
     const botaoImprimir = document.createElement("button");
     botaoImprimir.textContent = "Imprimir Currículo";
     botaoImprimir.classList.add("btn-print");
-    botaoImprimir.addEventListener("click", function(){
+    botaoImprimir.addEventListener("click", function () {
         botaoImprimir.style = 'display: none'
         window.print();
+        botaoImprimir.style = 'display: block'
     });
     body.appendChild(botaoImprimir);
 });

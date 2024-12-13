@@ -170,6 +170,13 @@ footer{
     color: var(--cor-textos);
 }
 
+textarea{
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 50px;
+    max-height: 200px;
+}
+
 /*KF*/
 @keyframes glowing {
     0% { background-position: 0 0; }

@@ -14,34 +14,31 @@ function adxp() {
     idxp++; // Incrementa o contador global de experiências
     const c_xp = criarElemento("div", { id: `c_xp${idxp}`, className: "xp-container" });
 
-    const e_xp_l = criarElemento("label", { htmlFor: `exp${idxp}` }, "Empresa:");
-    const e_xp = criarElemento("input", { id: `exp${idxp}`, type: "text", className: "xp-input" });
+    experienciasIds.push(`c_xp${idxp}`); // Adiciona o ID ao array
 
-    const ca_xp_l = criarElemento("label", { htmlFor: `caxp${idxp}` }, "Cargo:");
-    const ca_xp = criarElemento("input", { id: `caxp${idxp}`, type: "text", className: "xp-input" });
+    const e_xp_l = criarElemento("label", { htmlFor: `xp_empresa${idxp}` }, "Empresa:");
+    const e_xp = criarElemento("input", { id: `xp_empresa${idxp}`, type: "text", className: "xp-input" });
 
-    const durde_xp_l = criarElemento("label", { htmlFor: `durdexp${idxp}` }, "Duração - De:");
-    const durde_xp = criarElemento("input", { id: `durdexp${idxp}`, type: "month", className: "xp-input" });
+    const ca_xp_l = criarElemento("label", { htmlFor: `xp_cargo${idxp}` }, "Cargo:");
+    const ca_xp = criarElemento("input", { id: `xp_cargo${idxp}`, type: "text", className: "xp-input" });
 
-    const durate_xp_l = criarElemento("label", { htmlFor: `duratexp${idxp}` }, "Até:");
-    const durate_xp = criarElemento("input", { id: `duratexp${idxp}`, type: "month", className: "xp-input" });
+    const durde_xp_l = criarElemento("label", { htmlFor: `xp_dur_de${idxp}` }, "Duração - De:");
+    const durde_xp = criarElemento("input", { id: `xp_dur_de${idxp}`, type: "month", className: "xp-input" });
+
+    const durate_xp_l = criarElemento("label", { htmlFor: `xp_dur_ate${idxp}` }, "Até:");
+    const durate_xp = criarElemento("input", { id: `xp_dur_ate${idxp}`, type: "month", className: "xp-input" });
 
     const emAtividade_l = criarElemento("label", { htmlFor: `ematividade${idxp}` }, "Em atividade:");
     const emAtividade = criarElemento("input", { id: `ematividade${idxp}`, type: "checkbox", className: "xp-checkbox" });
 
     const btn_del = criarElemento(
         "button",
-        {
-            type: "button",
-            className: "btn-delete",
-        },
+        { type: "button", className: "btn-delete" },
         "Excluir Experiência"
     );
 
-    // Adiciona o evento de exclusão ao botão
-    btn_del.addEventListener("click", () => removerExperiencia(c_xp.id));
+    btn_del.addEventListener("click", () => removerExperiencia(`c_xp${idxp}`));
 
-    // Monta o container da experiência
     c_xp.append(
         e_xp_l, e_xp,
         ca_xp_l, ca_xp,
@@ -51,7 +48,6 @@ function adxp() {
         btn_del
     );
 
-    // Adiciona o container ao DOM
     document.getElementById("experiencias_profissionais").appendChild(c_xp);
 }
 

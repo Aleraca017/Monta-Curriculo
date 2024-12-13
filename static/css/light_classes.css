@@ -118,13 +118,8 @@
     height: auto;
     text-align: left;
 }
-.formacoes_c1{
+.formacao{
     width: 100%;
-    height: auto;
-    font-size: 2.5vh;
-}
-.formacoes_c1 input{
-    width: 90%;
 }
 .formacoes p{
     text-align: center;

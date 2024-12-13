@@ -98,13 +98,8 @@
     height: auto;
     text-align: left;
 }
-.formacoes_c1{
+.formacao{
     width: 100%;
-    height: auto;
-    font-size: 2.5vh;
-}
-.formacoes_c1 input{
-    width: 90%;
 }
 .formacoes p{
     text-align: center;
@@ -275,8 +270,13 @@
 }
 /*botoes--------------------------------------------------------------------------------*/
 .botoes_submitreset{
-    width: 32vw;
+    width: 100%;
     height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    margin-top: 10px;
     background-color: rgba(240, 248, 255, 0);
 
 }
