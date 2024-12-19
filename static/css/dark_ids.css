@@ -22,7 +22,10 @@
 }
 #tema{
     display: none;
+}
 
+#reset{
+    background: linear-gradient(135deg, rgb(192, 47, 47),rgb(183, 102, 102), rgb(187, 42, 42),rgb(177, 75, 75), rgb(176, 25, 25));
 }
 
 @media (max-width: 768px){

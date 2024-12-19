@@ -62,28 +62,47 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3vh;
 }
-.dados_pessoais_c1{
-    width: 48%;
-    height: 52vh;
-    display: flex;
-    flex-direction: column;
-    font-size: 2.5vh;
-}
-.dados_pessoais_c2{
-    width: 48%;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    font-size: 2.5vh;
-}
 .dados_pessoais_f1{
     height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 .dados{
     margin-top: 1vh;
 }
+
+/*Campo de Objetivos*/
+.objetivo{
+    width: 32vw;
+    height: auto;
+    margin-top: 1vh;
+    text-align: center;
+    color: white;
+}
+
+.objetivo textarea{
+    background-color:#00000000;
+    color: var(--cor-textos);
+    border-style: solid;
+    border-radius: 1vh;
+    border-color: rgb(255, 255, 255);
+    border-width: 0.3vh;
+    width: 100%;
+    height: auto;
+    font-size: 2vh;
+    text-align: center;
+    outline: none;
+    
+}
+
+.objetivo p{
+    color: var(--cor-titulos);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+}
+
 /*Campo de dados Formações ---------------------------------------------------------------------------------------------------------*/
 .formacoes{
     width: 32vw;
@@ -97,6 +116,7 @@
     width: auto;
     height: auto;
     text-align: left;
+    margin-left: -1vh;
 }
 .formacao{
     width: 100%;
@@ -373,6 +393,19 @@
     .dados_pessoais input{
         width: 100%;
     }
+
+    /*Campo de objetivo*/
+    .objetivo {
+        width: 80vw;
+    }
+
+    .objetivo p{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2vh;
+    }
+
+
     /*Campo de dados Formações*/
     .formacoes{
         width: 80vw;

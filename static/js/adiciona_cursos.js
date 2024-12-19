@@ -15,7 +15,7 @@ function btn_plus1() {
     const c_curso = criarElemento("div", { id: `c_curso${curso}`, className: "curso-container" });
 
     // Adiciona o ID do curso ao array
-    cursoIds.push(c_curso.id);  // Aqui você garante que o ID seja registrado
+    cursoIds.push(c_curso.id);
 
     const name_curso_l = criarElemento("label", { htmlFor: `n_curso${curso}` }, "Curso: ");
     const name_curso = criarElemento("input", { id: `n_curso${curso}`, type: "text", className: "curso-input" });
@@ -23,16 +23,25 @@ function btn_plus1() {
     const inst_curso_l = criarElemento("label", { htmlFor: `i_curso${curso}` }, "Instituição: ");
     const inst_curso = criarElemento("input", { id: `i_curso${curso}`, type: "text", className: "curso-input" });
 
-    const durde_curso_l = criarElemento("label", { htmlFor: `durde_curso${curso}` }, "Duração De: ");
+    // Criar o container para os campos de duração
+    const duracao_container = criarElemento("div", { className: "duracao-container" });
+
+    // Criar a div para o campo "De"
+    const durde_curso_l = criarElemento("label", { htmlFor: `durde_curso${curso}` }, "De: ");
     const durde_curso = criarElemento("input", { id: `durde_curso${curso}`, type: "month", className: "curso-input" });
 
+    // Criar a div para o campo "Até"
     const durate_curso_l = criarElemento("label", { htmlFor: `durate_curso${curso}` }, "Até: ");
     const durate_curso = criarElemento("input", { id: `durate_curso${curso}`, type: "month", className: "curso-input" });
 
+    // Adicionar as divs de "De" e "Até" ao container de duração
+    duracao_container.append(durde_curso_l, durde_curso, durate_curso_l, durate_curso);
+
     const btn_del = criarElemento(
-        "button",
+        "input",
         {
             type: "button",
+            value: "Excluir Curso",
             className: "btn-delete",
         },
         "Excluir Curso"
@@ -45,14 +54,14 @@ function btn_plus1() {
     c_curso.append(
         name_curso_l, name_curso,
         inst_curso_l, inst_curso,
-        durde_curso_l, durde_curso,
-        durate_curso_l, durate_curso,
+        duracao_container, // Adiciona o container de duração
         btn_del
     );
 
     // Adiciona o container ao DOM
     document.getElementById("cursos_extras").appendChild(c_curso);
 }
+
 
 
 function removerCurso(id) {

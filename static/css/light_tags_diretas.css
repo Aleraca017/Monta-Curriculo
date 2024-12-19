@@ -78,6 +78,15 @@ input[type="checkbox"]{
     height: 2vh;
     margin-top: 1vh;
 }
+
+input[type="text"]:disabled{
+    border-color: gray;
+    opacity: 25%;
+    &:hover{
+        border-color: gray;
+    }
+}
+
 input[type="text"], [type="email"], [type="date"], [type="tel"]{
     border-top: 0vh;
     border-left: 0vh;

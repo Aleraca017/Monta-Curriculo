@@ -17,9 +17,7 @@ async function buscaCep() {
 
         if (response.ok) {
             const endereco = await response.json();
-            document.getElementById("rua").value = endereco.street || "";
-            document.getElementById("bairro").value = endereco.neighborhood || "";
-            document.getElementById("city").value = endereco.city || "";
+            document.getElementById("city").value = endereco.city+" - "+endereco.state || "";
             exibirMensagem("Endereço encontrado!", "success");
         } else if (response.status === 404) {
             exibirMensagem("CEP não encontrado.", "error");
