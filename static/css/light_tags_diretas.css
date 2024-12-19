@@ -24,7 +24,7 @@ button:last-child{
     background: linear-gradient(135deg, rgb(255, 64, 223),rgb(195, 106, 255), rgb(126, 57, 255),rgb(130, 108, 255), rgb(67, 34, 255));
 }
 button:hover{
-    box-shadow: 0vh 0.7vh 2vh rgb(159, 107, 255);
+    animation: shadows .7s infinite alternate ease-in-out;
 }
 button[type="submit"]{
     width: 10vw;
@@ -155,8 +155,8 @@ hr{
     border: 0;
 }
 select{
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background: linear-gradient(135deg, rgb(20, 20, 20),rgb(123, 123, 123), rgb(67, 67, 67),rgb(21, 21, 21), rgb(123, 123, 123));
+    color: rgb(255, 255, 255);
     outline: none;
     border: 0;
     border-radius: 15vh;
@@ -169,6 +169,11 @@ select{
     text-align: center;
     font-size: 1.2vh;
 }
+
+option{
+    background-color: rgb(42, 42, 42);
+}
+
 footer{
     text-align: end;
     width: 100%;
@@ -184,6 +189,15 @@ textarea{
     min-width: 100%;
     min-height: 50px;
     max-height: 200px;
+}
+
+@keyframes shadows {
+    0%{
+        box-shadow: 0vh 0.0vh 0vh rgb(159, 107, 255)
+    }
+    100%{
+        box-shadow: 0vh 0vh 3vh rgb(159, 107, 255)
+    }
 }
 
 /*KF*/

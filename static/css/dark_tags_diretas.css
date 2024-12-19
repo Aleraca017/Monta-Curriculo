@@ -14,6 +14,7 @@ input[type="checkbox"]{
     width: 2vw;
     height: 2vh;
     margin-top: 1vh;
+    transform: translateY(1px);
 }
 
 input[type="text"], [type="email"], [type="date"], [type="tel"]{
@@ -169,8 +170,8 @@ hr{
     border: 0;
 }
 select{
-    background-color: rgb(27, 27, 27);
-    color: white;
+    background: linear-gradient(135deg, rgb(223, 223, 223),rgb(110, 110, 110), rgb(175, 175, 175),rgb(219, 219, 219), rgb(123, 123, 123));
+    color: rgb(0, 0, 0);
     outline: none;
     border: 0;
     border-radius: 15vh;
@@ -182,7 +183,13 @@ select{
     margin-bottom: 1vh;
     text-align: center;
     font-size: 1.2vh;
+    font-weight: bold;
 }
+
+option{
+    background-color: rgb(203, 203, 203);
+}
+
 footer{
     text-align: end;
     width: 100%;

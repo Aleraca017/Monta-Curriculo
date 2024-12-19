@@ -506,40 +506,33 @@
         margin-top: 1vh;
         text-align: center;
     }
-    .cursos_f1{
+    .curso-container{
         width: auto;
         height: auto;
+        margin-left: -1vh;
         text-align: left;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    .cursos_c1{
-        width: 100%;
-        height: auto;
-        font-size: 1.5vh;
-        padding-bottom: 3vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .cursos_c1 label{
-        padding: 1vh;
-        display: flex;
-        align-items: center;
-    }
-    .cursos_c1 input [type="month"]{
-        width: 9vw;
+
+    .curso-container input[type="month"]{
+        width: auto;
         height: 3vh;
-        margin-left: 1vw;
+        margin-left: 5px;
     }
     .cursos_extra p{
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 2vh;
     }
-    .cursos_extra input{
-        width: 100%;
+
+    .duracao-container{
+        margin-top: 1vh;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     /*Habilidades*/
@@ -585,25 +578,23 @@
         margin-top: 1vh;
         text-align: center;
     }
-    #xp_f{
+    .xp-container{
         width: auto;
         height: auto;
+        margin-left: -1vh;
         text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    .xp_c1{
-        width: 100%;
-        height: auto;
-        font-size: 1.5vh;
-        padding-bottom: 2vh;
+
+    .xp-container input[type='month']{
+        width: auto;
+        height: 3vh;
+        margin-left: 5px;
     }
-    .xp_c1 label{
-        padding: 1vh;
-    }
-    .xp_c1 input[type="month"]{
-        width: 15vw;
-        height: 2vh;
-        margin-left: 0.3vw;
-    }
+
     .experiencias_profissionais p {
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
@@ -613,10 +604,30 @@
         width: 100%;
         margin-bottom: 1vh;
     }
-    .label_xp_dur_de{
-        width: auto;
-        height: auto;
+    
+    .experiencias_profissionais input[type='text']{
+        margin-left: -1vh;
     }
+
+    .duracao-atividade-container{
+        margin-top: 1vh;
+        width: 80vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .em-atividade-container{
+        margin-top: -3vh;
+    }
+
+    .btn-add-atrib{
+        width: 45vw;
+        &:hover{
+            width: 45vw;
+        }
+    }
+
     /*Observações*/
     .observacoes_gerais{
         width: 80vw;
